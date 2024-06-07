@@ -1,20 +1,19 @@
 .nav-bar {
-    width:auto;
-    Display: flex;
+    width: 100%;
+    /* height: 3%; */
+    display: flex;
     justify-content: space-between;
-    background-color: #0acf9e73;
+    background-color: #357b6aaf;
     border-width: 0;
+    position: sticky;
+    top: 0;
+
 }
 
-.home-page {
-    list-style: none;
-}
-
-
-.pages{
+.pages, .home-page{
   Display: flex;
   list-style: none;
-  justify-content:space-between;
+  justify-content:space-between ;
 }
 
 .pages li{
@@ -22,3 +21,64 @@
     padding-right:0.75rem;
 }
 
+.style_1{
+    display:grid;
+    margin-top:10px;
+    align-content: center;
+    width: 32.89%;
+    height: 10rem;
+    border: 1px solid;
+    display: inline-block;
+    align-items: flex-start;
+
+} 
+.style_1:hover {
+    /* opacity: 80%; */
+    margin-bottom: -8px;
+    border-bottom: 9px solid black;
+    transition: ease-in 0.2s;
+    transform: scale(1.1);
+    
+}
+
+
+.style_1_button{
+    display: inline-block;
+    color:aliceblue;
+    font-size:xx-large;
+    font: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: url("https://static.vecteezy.com/system/resources/previews/032/326/152/non_2x/attic-scandinavian-home-interior-design-of-modern-living-room-corner-sofa-and-rustic-coffee-table-against-wood-lining-wall-with-book-shelves-ai-generative-free-photo.jpg");
+    background-size:cover;
+    background-position: center;
+    position: static;
+    
+}
+
+.body {
+    height: 300vh;
+    margin: 0;
+
+}
+
+.scandirustic_living_room {
+    display: auto;
+    max-width: 100%;
+    height: 20%;
+    border-bottom: 10px solid;
+    border-bottom-style: ridge;
+    border-color: aliceblue;
+    /* border-radius: 5p; */
+    background: url(https://static.vecteezy.com/system/resources/previews/032/326/152/non_2x/attic-scandinavian-home-interior-design-of-modern-living-room-corner-sofa-and-rustic-coffee-table-against-wood-lining-wall-with-book-shelves-ai-generative-free-photo.jpg);
+    background-size: cover;
+    text-align: center;
+    padding-top: 10%;
+    color: aliceblue;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:x-large;
+}
+
+.Sign_up {
+    width: 100%;
+    text-align:center;
+}
