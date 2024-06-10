@@ -4,37 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Example HTML</title>
-    <link rel="stylesheet" href="CSS page.css">
+    <link id="style" rel="stylesheet" href="CSS page.css">
     <script src="javascript page.js" defer></script>
+
 
 </head>
 <body onload="onloadStyle()" class="body">
     <nav class="nav-bar">
-
         <ul>
             <li class="home-page">Home page</li>
         </ul>
-        <ul class="pages">
-            <li id="page1">Page 1</li>
-            <li>Page 2</li>
-            <li>Page 3</li>
-            <li>Page 4</li>
+        <ul id=pages class="pages">
+            <li id="page1" class="active"><a href="#style_list">Page 1</a></li>
+            <li id="page2">Page 2</li>
+            <li id="page3">Page 3</li>
+            <li id="page4">Page 4</li>
         </ul> 
     </nav>
-    <h1 class = "scandirustic_living_room">Some inspirational text about something important - style 1</h1>
+    <h1 class = "scandirustic_living_room"><q><i>Some inspirational text about something important</i></q> - style 1</h1>
         <!-- <img class ="scandirustic_living_room" src="https://static.vecteezy.com/system/resources/previews/032/326/152/non_2x/attic-scandinavian-home-interior-design-of-modern-living-room-corner-sofa-and-rustic-coffee-table-against-wood-lining-wall-with-book-shelves-ai-generative-free-photo.jpg" alt="Image of something"> -->
-    <div Id= "style_list">
+    <div id= "style_list" class="style_list">
         <button id="Style_1" class="style_1_button">Style 1</button>
-        <button id="style_2" class="style_1_button">Style 2</button>
-        <button id="style_3" class="style_1_button">Style 3</button>
+        <button id="Style_2" class="style_1_button">Style 2</button>
+        <button id="Style_3" class="style_1_button">Style 3</button>
        
         <button id="style_4" class="style_1_button">Style 4</button>
         <button id="Random" class="style_1_button">Random</button>
         <button id="style_5" class="style_1_button">Style 5</button>
     </div>
-    <br>
     <div>
-        <p1 class="Sign_up">Sign up for updates on new styles<input placeholder="Email address"><button>Sign up</button></submit></p1>
+
     </div>
+    <br>
+    <container class="container">
+        <div class="div1">
+            <!-- <p>lost in the desert, over - trooper</p> -->
+        </div>
+        <div class="div2">
+        </div>
+        <div class="div3">
+        </div>
+    </container>
+    <br>
+    <div class="Sign_up">
+        <h2>Sign up for updates on new styles <input placeholder="Email address"><button>Sign up</button></submit></h2>
+    </div>
+
+    <footer class="footer">
+        <div>
+            <h1>Find out more</h1>
+            <ul>
+                <li>what are styles?</li>
+                <li>where are styles?</li>
+                <li>why are styles?</li>
+                <li>how are styles?</li>
+            </ul>
+        </div>
+        <div>
+            <h1>Contact</h1>
+            <ul>
+                <li>Email: example@email.com</li>
+                <li>Phone: 12345 678 910</li>
+                <br>
+                <li>12 address street</li>
+                <li>example town</li>
+                <li>AB12 3CD</li>
+            </ul>
+        </div>
+        <div>
+            <h1>Connect</h1>
+            <ul>
+                <li>Facebook: Example123</li>
+                <li>instagram: Example123</li>
+                <li>X: Example123</li>
+                <li>LinkedIn: Example123</li>
+            </ul>
+        </div>
+
+
+    </footer>
 </body>
 </html>

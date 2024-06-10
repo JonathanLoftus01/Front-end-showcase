@@ -1,13 +1,30 @@
-const button = document.getElementById("button");
-const page1 = document.getElementById("page1")
-// page1.style.backgroundColor = "#ff0000"
+const button = document.getElementById("Style_1");
+const button2 = document.getElementById("Style_2");
+const button3 = document.getElementById("Style_3");
+const pages = document.getElementById("pages");
+// const page1 = document.getElementById("page1")
+// // page1.style.backgroundColor = "#ff0000"
 
 button.addEventListener("click", () => {
-    page1.classList.toggle("page1");
+    document.head.querySelector("link").remove();
+    // console.log(document.head.replaceChild("link"));
+
+});
+button2.addEventListener("click", () => {
+    
+    document.head.appendChild("link")
+
+});
+button3.addEventListener("click", () => {
+    const head_link = document.head.querySelector("link")
+    const node = document.createElement()
+
 });
 
-
-// console.log("This javascript is working")
+function changeStyle(){
+    const headChildren = document.getElementsById("style").children;
+    console.log("style")
+}
 
 function onloadStyle() { //applies a style to the website when first loading in.
 
@@ -21,5 +38,17 @@ function onloadStyle() { //applies a style to the website when first loading in.
 function Change_style(parent_element, style){
     parent_element.classList.add(style)
 }
+//changes the page
+console.log(pages)
+pages.addEventListener("click", () => {
+    for(i=0;i<pages.children.length;i++){
+        pages.children[i].classList = ""
+        console.log(pages.children[i].classList); 
+    }
+    
+    console.log(event.target.classList.add("active"));
+    console.log(pages.children.length);
+   
+    // console.log(document.head.replaceChild("link"));
 
-// console.log(document.getElementsByName(document.getElementById("style_list")));
+});
