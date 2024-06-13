@@ -10,11 +10,11 @@ button.addEventListener("click", () => {
     // console.log(document.head.replaceChild("link"));
 
 });
-button2.addEventListener("click", () => {
-    
+button2.addEventListener("click", () => {    
     document.head.appendChild("link")
-
 });
+
+
 button3.addEventListener("click", () => {
     const head_link = document.head.querySelector("link")
     const node = document.createElement()
@@ -39,16 +39,40 @@ function Change_style(parent_element, style){
     parent_element.classList.add(style)
 }
 //changes the page
-console.log(pages)
-pages.addEventListener("click", () => {
-    for(i=0;i<pages.children.length;i++){
-        pages.children[i].classList = ""
-        console.log(pages.children[i].classList); 
-    }
-    
-    console.log(event.target.classList.add("active"));
-    console.log(pages.children.length);
-   
-    // console.log(document.head.replaceChild("link"));
 
-});
+
+var page_locations = {//creates objects where key is page id and value is a function to navigate to page
+    "home-page": function() {window.location.href="#body"},
+    "page1": function() {window.location.href="#style_list";},
+    "page2": function() {window.location.href="#container"},
+    "page3": function() {window.location.href="#style_list"},
+    "page4": function() {window.location.href="#style_list"}
+}
+
+function remove_styles(){
+    for(i=0;i<pages.children.length;i++){//loops through pages
+                pages.children[i].classList = "";//removes styles from all children in pages 
+            }
+    document.getElementById("home-page").classList="";
+}
+
+document.addEventListener("click", () => {
+    // alert(`${event.target.id}`)
+    page_locations[event.target.id]();
+    console.log(page_locations[0]())
+})
+
+document.addEventListener("scroll", () => {
+    remove_styles();
+    // console.log("scrolling");
+    console.log(window.visualViewport.pageTop)
+    if (window.visualViewport.pageTop < 420){
+        document.getElementById("home-page").classList.add("active");
+    } else if(window.visualViewport.pageTop > 420 && window.visualViewport.pageTop < 850){
+        pages.children["page1"].classList.add("active");
+    } else if (window.visualViewport.pageTop >850){
+        pages.children["page2"].classList.add("active");
+    }
+    // document.getElementById("home-page").classList.add("");
+    console.log(document.getElementById("home-page"))
+})
